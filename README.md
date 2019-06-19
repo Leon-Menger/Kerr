@@ -2,7 +2,7 @@
 A small but potent Kerr-metric Raytracer that I wrote during a lecture on "Black Holes and Neutron Stars - Theory and Observation" by Dr. C. Fromm and Dr. R. Gold at the Goethe-Universität Frankfurt am Main.
 
 The code is meant for educational purposes and is not efficient but sure alot of fun to modify and use.
-Moularity and easy access are main goals for this project so evertyhing is well documented and all sources can be found within the code.
+Modularity and easy access are main goals for this project so everything is well documented and all sources can be found within the code.
 
 The paper we were using is written by Pu et al. and can be found at: https://arxiv.org/pdf/1601.02063.pdf.
 
