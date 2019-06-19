@@ -285,11 +285,11 @@ def main():
             initials = INITS[0]										#gets inital pos from INIT
             conserved = INITS[1]									#gets conserved quantities
             solutions = GeodesicSolver(initials, conserved, a)		#calculates ray trajectory
-			#convenient new names
+	    	#convenient new names
             r,theta,phi = solutions.y[0].astype(float),solutions.y[1].astype(float),solutions.y[2].astype(float)
 			
-			#This part calculates the color of the ray
-			#if the last theta angle is close enough to pi/2 the ray gets a color
+	    	#This part calculates the color of the ray
+	    	#if the last theta angle is close enough to pi/2 the ray gets a color
             if np.abs(solutions.y[1][-1]-np.pi/2) <= 1e-2 :
                 #This one is more accurate for a temperature distribution
                 raycol = 1/(solutions.y[0][-1])**(2/3)
@@ -299,18 +299,18 @@ def main():
 				#rays that dont hit the disc are black
                 raycol = 0
            
-            colormap[j+ranger][i+ranger] = raycol			#puts color to colormap
-            timesum += timeit.default_timer()-raystart		#updates timesum
-            mean = timesum/N								#calculates new mean time per ray
-        plt.imshow(colormap, cmap = "gray")					#plots the updated colormap
-        fig.canvas.draw()									#redraws the canvas
-		#ordered terminal output of current status (percentage is NOT linear with time)
+            colormap[j+ranger][i+ranger] = raycol					#puts color to colormap
+            timesum += timeit.default_timer()-raystart				#updates timesum
+            mean = timesum/N										#calculates new mean time per ray
+        plt.imshow(colormap, cmap = "gray")							#plots the updated colormap
+        fig.canvas.draw()											#redraws the canvas
+	#ordered terminal output of current status (percentage is NOT linear with time)
         print(f"   {(i+ranger)/(2*ranger+1) * 100:.2f} % , Timemean = {mean:.4f}, Rays: {N} of {(2*ranger+1)**2}", end="\r")
 	#shows final colormap
     plt.imshow(colormap, cmap = "gray")
     fig.canvas.draw()
     
-    allstop = timeit.default_timer()                #prints time the main function took overall
+    allstop = timeit.default_timer()				#prints time the main function took overall
 	
     print("Main function elapsed: {:.2f}".format(allstop-allstart))		#self explanatory terminal output
     print("Mean time per Ray: {:.4f} ".format(mean))					# ^^
