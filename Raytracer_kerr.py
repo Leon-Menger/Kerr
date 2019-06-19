@@ -280,7 +280,7 @@ def main():
         for j in range(-ranger,ranger+1):
             N+=1													#updates number of rays done	
             raystart = timeit.default_timer()						#starts timer for ray operations
-            INITS = InitAndConserved(i*alpha, j*beta,\				
+            INITS = InitAndConserved(i*alpha, j*beta,\
 								r_obs, theta_obs, phi_obs, a)		#gets initial values for the ray
             initials = INITS[0]										#gets inital pos from INIT
             conserved = INITS[1]									#gets conserved quantities
