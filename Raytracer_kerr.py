@@ -12,12 +12,8 @@
 import numpy as np                          #strong tool and math library
 import math                                 #basic math routines
 from matplotlib import pyplot as plt		#for creating plots
-from mpl_toolkits.mplot3d import Axes3D		#for 3d plots
-from matplotlib import cm                   #colormaps for our plot
-from matplotlib.colors import LightSource   #for a shading effect in our 3D plot
 import timeit                               #times the steps involved
 from scipy.integrate import solve_ivp       #imports a convenient ODE solving method
-import datetime
 
 
 __author__ = "Léon Geiger"
