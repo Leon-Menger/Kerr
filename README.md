@@ -9,3 +9,6 @@ The paper we were using was written and published by Pu et al. and can be found 
 Another interesting read is the documentation of scipys "solve_ivp" method as it allows for easy event, step size and integration method implementation: https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html
 
 The GIF that can be found in the repo was created by varying the oberver angle theta from 0 to 180 and then flipping the images adequately. Note that to use the animation the CC-by-sa 4.0 license applies.
+
+
+![Rotating Black hole; 0-180 degree azimuth](ANI.gif)
